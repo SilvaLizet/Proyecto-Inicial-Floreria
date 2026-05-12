@@ -53,6 +53,6 @@ Fase de Servicios: Cómo crear funciones que descuenten stock automáticamente a
 
 Brinda consejos sobre optimización de imágenes externas, manejo de errores en la conexión y trucos de arquitectura para que el proyecto sea escalable y fácil de mantener.
 
-Asegúrate de que este documento sea una hoja de ruta total, con pasos largos y bien explicados que no omitan ninguna funcionalidad, garantizando que el proyecto Aura sea un éxito absoluto desde la planificación. No incluyas bloques de código, solo la explicación detallada de los procesos.
+Asegúrate de que este documento sea una hoja de ruta total, con pasos largos y bien explicados que no omitan ninguna funcionalidad, garantizando que el proyecto Aura sea un éxito absoluto desde la planificación. No incluyas bloques de código, solo la explicación detallada de los procesos. 
 
 ## Lizet Alejandra Silva Martinez 6J
