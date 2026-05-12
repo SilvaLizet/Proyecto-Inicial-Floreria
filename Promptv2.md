@@ -1,7 +1,7 @@
 
 ## Prompt para la IA
 
-Actúa como un mentor y arquitecto de software experto para guiarme en la creación de Aura, una aplicación profesional de gestión para una florería y centro de jardinería. El objetivo es desarrollar una solución multiplataforma (Android, Web y Windows) utilizando Flutter y Firebase. Restricción absoluta: No utilices el paquete "provider" para la gestión del estado; en su lugar, organiza el proyecto de forma limpia mediante servicios o lógica nativa que sea fácil de entender para un principiante.
+Actúa como un mentor y arquitecto de software experto para guiarme en la creación de Aura, una aplicación profesional de gestión para una florería y centro de jardinería. El objetivo es desarrollar una solución multiplataforma (Android, Web, iOS y Windows) utilizando Flutter y Firebase. Restricción absoluta: No utilices el paquete "provider" para la gestión del estado; en su lugar, organiza el proyecto de forma limpia mediante servicios o lógica nativa que sea fácil de entender para un principiante.
 
 No generes el código todavía. Necesito que primero redactes un documento de planificación maestro, sumamente detallado y extenso en formato Markdown, que incluya los siguientes puntos:
 
