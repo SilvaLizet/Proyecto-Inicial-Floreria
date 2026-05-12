@@ -1,19 +1,58 @@
 
+## Prompt para la IA
 
----
+Actúa como un mentor y arquitecto de software experto para guiarme en la creación de Aura, una aplicación profesional de gestión para una florería y centro de jardinería. El objetivo es desarrollar una solución multiplataforma (Android, Web y Windows) utilizando Flutter y Firebase. Restricción absoluta: No utilices el paquete "provider" para la gestión del estado; en su lugar, organiza el proyecto de forma limpia mediante servicios o lógica nativa que sea fácil de entender para un principiante.
 
-### Prompt para la IA
+No generes el código todavía. Necesito que primero redactes un documento de planificación maestro, sumamente detallado y extenso en formato Markdown, que incluya los siguientes puntos:
 
-Actúa como un Arquitecto Senior de Software con especialización en el ecosistema Flutter y experto en infraestructuras Cloud con Firebase. Tu misión es liderar la planificación técnica y estratégica de una aplicación multiplataforma de gestión integral para **Aura**, una florería y centro de jardinería profesional con visión moderna. La solución debe estar diseñada para ejecutarse con un rendimiento óptimo en Android, Web y Windows, utilizando VS Code como entorno de desarrollo y Firebase en una configuración estándar de desarrollo.
+1. Estructura de Carpetas y Documentos:
 
-**Bajo ninguna circunstancia debes generar código todavía, ni usar promider.** El entregable debe ser un documento de planificación maestro en formato Markdown, redactado con un tono humano, técnico y pedagógico, que fusione la estética visual del diseño floral de **Aura** con una ingeniería de datos robusta basada en las siguientes entidades: **Proyectos de Paisajismo**, **Categorías de Plantas**, **Cuentas de Inventario/Caja**, **Usuarios (Roles)**, **Transacciones (Ventas/Compras)**, **Presupuestos de Servicios**, **Proveedores de Insumos** y **Facturación**.
+Define y explica minuciosamente cómo organizar el proyecto en VS Code. Detalla el propósito de cada carpeta (ej. models/, views/, services/, widgets/). La estructura debe ser tan clara que un desarrollador junior pueda navegar el proyecto de Aura sin confusiones y entender dónde se procesan los datos y dónde se dibuja la interfaz. Incluye una representación visual de la jerarquía de carpetas.
 
-El documento debe comenzar con una descripción general del sistema que explique paso por paso cómo la plataforma digital de **Aura** transformará la operación diaria del negocio, integrando la gestión de stock con la administración de servicios de jardinería de alta gama. Posteriormente, define una arquitectura de software escalable para Flutter; dado que **está estrictamente prohibido usar el paquete provider**, propón una estructura basada en Clean Architecture o el patrón de Inyección de Dependencias y Servicios, detallando la organización de carpetas por capas y la separación estricta entre la lógica de negocio y la interfaz de usuario.
+2. Identidad Visual (Paleta Lila/Morada) y UX:
 
-En la sección de tecnologías, justifica el uso de Dart y el ecosistema de Firebase, profundizando en cómo Firestore gestionará los documentos de productos y ventas, cómo Firebase Authentication manejará el acceso del personal y cómo Firebase Storage almacenará las fotografías del catálogo botánico de **Aura**. Describe un diseño UI/UX que evoque la naturaleza y la elegancia de la marca: un estilo moderno, responsive y profesional, con una paleta de colores orgánica y una navegación intuitiva que se adapte perfectamente tanto a una tablet en el mostrador como a una aplicación de escritorio o navegador web.
+Diseña una propuesta visual elegante para Aura utilizando tonos lilas, lavandas y morados profundos. Aplica la regla de contraste: texto negro sobre fondos claros y texto blanco sobre fondos oscuros. Explica cómo aplicar estos colores en botones de acción, encabezados y estados de selección para que la app luzca profesional y moderna.
 
-Para la planeación del desarrollo, establece una hoja de ruta dividida en diez fases detalladas: desde la configuración inicial y el diseño de la base de datos NoSQL en Firestore, hasta el desarrollo de los módulos CRUD para las plantas, la lógica de transacciones en tiempo real, la gestión de facturación y las pruebas de despliegue multiplataforma. Cada fase debe incluir objetivos claros, herramientas específicas, buenas prácticas de codificación y una sección de gestión de riesgos con soluciones recomendadas para problemas comunes en Flutter.
+3. Arquitectura de Datos en Firestore (Tablas y Campos):
 
-Adicionalmente, incluye una sección de dependencias críticas para el archivo pubspec.yaml, explicando la utilidad técnica de cada una en el contexto de la gestión botánica. Finaliza con una estrategia de seguridad basada en reglas de Firestore y roles de usuario, un diagrama narrativo del flujo de navegación dentro de la app de **Aura** y un plan de implantación profesional para el despliegue de versiones de prueba. El documento debe concluir con una serie de recomendaciones de "Senior Developer" sobre optimización de consultas en Firestore y mantenimiento de una arquitectura limpia para asegurar que el proyecto sea escalable y profesional.
+Detalla la estructura (tambien incluye ejemplo visual en formato tabla)de la base de datos NoSQL de forma exhaustiva. Define las siguientes colecciones con sus campos específicos:
 
-## Lizet Alejandra Silva Martinez 6. - J
+Articulos (Flores/Plantas): ID, nombre, descripción, precio, stock, categoría_id, y imagen_url (vinculada a GitHub).
+
+Categorias: ID, nombre_categoria, descripción y color_identificador.
+
+Clientes: ID, nombre_completo, teléfono, correo y fecha_registro.
+
+Empleados: ID, nombre, puesto, correo y nivel_acceso (rol).
+
+Ventas: ID, cliente_id, empleado_id, fecha, total, estado y un sub-listado de articulos_vendidos.
+
+Proveedores: ID, nombre_empresa, contacto, teléfono y RFC.
+
+Facturas: ID, venta_id, numero_factura, fecha_emision y estado_pago.
+
+4. Integración con Firebase y Gestión de Imágenes desde GitHub:
+
+Explica detalladamente para principiantes cómo conectar la app con Firebase. Describe el método técnico para que las imágenes de los productos se carguen mediante URLs alojadas en un repositorio de GitHub, explicando cómo guardar ese enlace en Firestore para que la app lo consuma dinámicamente sin ocupar espacio de almacenamiento en Firebase Storage.
+
+5. Dependencias Críticas (pubspec.yaml):
+
+Presenta una lista detallada de las librerías necesarias, explicando para qué sirve cada una (ej. cloud_firestore para datos, firebase_auth para usuarios, cached_network_image para las fotos de GitHub, intl para fechas y monedas).
+
+6. Plan de Desarrollo Paso a Paso (Fases Detalladas):
+
+Divide el proyecto en fases lógicas y extensas (Preparación, Autenticación, Inventario, Ventas y Facturación). Para cada fase, brinda instrucciones narrativas profundas sobre:
+
+Fase de Base de Datos: Cómo mapear los objetos de la florería a documentos JSON.
+
+Fase de UI: Cómo diseñar la jerarquía de widgets para las tarjetas de flores y los formularios de venta.
+
+Fase de Servicios: Cómo crear funciones que descuenten stock automáticamente al confirmar una venta.
+
+7. Recomendaciones de Nivel Senior:
+
+Brinda consejos sobre optimización de imágenes externas, manejo de errores en la conexión y trucos de arquitectura para que el proyecto sea escalable y fácil de mantener.
+
+Asegúrate de que este documento sea una hoja de ruta total, con pasos largos y bien explicados que no omitan ninguna funcionalidad, garantizando que el proyecto Aura sea un éxito absoluto desde la planificación. No incluyas bloques de código, solo la explicación detallada de los procesos.
+
+## Lizet Alejandra Silva Martinez 6J
